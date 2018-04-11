@@ -1,0 +1,86 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <!-- Необязательный welcome-file-list -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--    Далее в комментарии указан один из способов зарегистрировать сервлеты или фильтры и сделать их маппинг.
+        Работоспособность способа проверена.
+        <servlet>
+            <servlet-name>MainPage</servlet-name>
+            <servlet-class>ru.boldyrev_ma.storeexample.servlets.MainPageServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>MainPage</servlet-name>
+            <url-pattern>/main</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>Catalog</servlet-name>
+            <servlet-class>ru.boldyrev_ma.storeexample.servlets.CatalogServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>Catalog</servlet-name>
+            <url-pattern>/catalog</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>PresentBox</servlet-name>
+            <servlet-class>ru.boldyrev_ma.storeexample.servlets.PresentBoxServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>PresentBox</servlet-name>
+            <url-pattern>/products/present-box/present-box</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>Basket</servlet-name>
+            <servlet-class>ru.boldyrev_ma.storeexample.servlets.BasketServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>Basket</servlet-name>
+            <url-pattern>/basket</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>Order</servlet-name>
+            <servlet-class>ru.boldyrev_ma.storeexample.servlets.OrderServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>Order</servlet-name>
+            <url-pattern>/order</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>Contacts</servlet-name>
+            <servlet-class>ru.boldyrev_ma.storeexample.servlets.ContactsServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>Contacts</servlet-name>
+            <url-pattern>/contacts</url-pattern>
+        </servlet-mapping>
+
+        <filter>
+            <filter-name>FilterUTF8</filter-name>
+            <filter-class>ru.boldyrev_ma.storeexample.filters</filter-class>
+        </filter>
+        <filter-mapping>
+            <filter-name>FilterUTF8</filter-name>
+            <url-pattern>"/*"</url-pattern>
+        </filter-mapping> -->
+
+    <error-page>
+        <error-code>403</error-code>
+        <location>/error403</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404</location>
+    </error-page>
+</web-app>
