@@ -10,20 +10,7 @@
 <body class="present-box">
 <div class="container">
     <div class="content">
-        <header class="header">
-            <a class="logo" href="../../main">
-                <!-- <img src="GoodMood.png" alt=""> -->
-                <h1>GoodMood</h1>
-            </a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="../../main">Главная</a></li>
-                    <li><a href="../../catalog">Каталог</a></li>
-                    <li><a href="../../basket">Корзина</a></li>
-                    <li><a href="../../contacts">Контакты</a></li>
-                </ul>
-            </nav>
-        </header>
+        <%@include file="/blocks/header.jsp" %>
         <main class="main">
             <h2>Подарочная коробка</h2>
             <div class="about-product">
@@ -71,9 +58,7 @@
             </div>
         </main>
     </div>
-    <footer class="footer">
-        <p>&copy;&nbsp;Все права защищены.</p>
-    </footer>
+    <%@include file="/blocks/footer.jsp" %>
 </div>
 </body>
 

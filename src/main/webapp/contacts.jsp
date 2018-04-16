@@ -10,20 +10,7 @@
 <body>
 <div class="container">
     <div class="content">
-        <header class="header">
-            <a class="logo" href="main">
-                <!-- <img src="GoodMood.png" alt=""> -->
-                <h1>GoodMood</h1>
-            </a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="main">Главная</a></li>
-                    <li><a href="catalog">Каталог</a></li>
-                    <li><a href="basket">Корзина</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-        </header>
+        <%@include file="/blocks/header.jsp" %>
         <main class="main">
             <h2>Контакты</h2>
             <div class="contacts">
@@ -61,9 +48,7 @@
             </div>
         </main>
     </div>
-    <div class="footer">
-        <p>&copy;&nbsp;Все права защищены.</p>
-    </div>
+    <%@include file="/blocks/footer.jsp" %>
 </div>
 </body>
 

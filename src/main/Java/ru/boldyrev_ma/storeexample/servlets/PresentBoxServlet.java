@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "PresentBox", urlPatterns = {"/products/present-box/present-box"})
+@WebServlet(name = "PresentBoxServlet", urlPatterns = {"/products/present-box/present-box"})
 public class PresentBoxServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
