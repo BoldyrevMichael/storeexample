@@ -31,12 +31,12 @@
         </servlet-mapping>
 
         <servlet>
-            <servlet-name>PresentBoxServlet</servlet-name>
-            <servlet-class>ru.boldyrev_ma.storeexample.servlets.PresentBoxServlet</servlet-class>
+            <servlet-name>ProductNServlet</servlet-name>
+            <servlet-class>ru.boldyrev_ma.storeexample.servlets.ProductNServlet</servlet-class>
         </servlet>
         <servlet-mapping>
-            <servlet-name>PresentBoxServlet</servlet-name>
-            <url-pattern>/products/present-box/present-box</url-pattern>
+            <servlet-name>ProductNServlet</servlet-name>
+            <url-pattern>/goods/*</url-pattern>
         </servlet-mapping>
 
         <servlet>
