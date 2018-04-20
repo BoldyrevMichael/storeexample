@@ -4,9 +4,11 @@ package ru.boldyrev_ma.storeexample.dao;
 import ru.boldyrev_ma.storeexample.entity.Product;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
+@Named
 @ApplicationScoped
 public class ProductDAO {
     private List<Product> products;

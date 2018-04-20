@@ -2,7 +2,6 @@ package ru.boldyrev_ma.storeexample.filters;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @WebFilter(filterName = "FilterUTF8", urlPatterns = {"/*"})
