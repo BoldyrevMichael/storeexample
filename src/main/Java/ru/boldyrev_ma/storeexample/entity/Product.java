@@ -1,7 +1,7 @@
-package ru.boldyrev_ma.storeexample.dao;
+package ru.boldyrev_ma.storeexample.entity;
 
 public class Product {
-    private final Integer id;
+    private Integer id;
     private String name;
     private Integer price;
     private Integer weight;
@@ -23,6 +23,10 @@ public class Product {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -35,7 +39,11 @@ public class Product {
         return price;
     }
 
-    public Product setPrice(Integer price) {
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Product setPriceA(Integer price) {
         this.price = price;
         return this;
     }
@@ -73,7 +81,11 @@ public class Product {
         return weight;
     }
 
-    public Product setWeight(Integer weight) {
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+
+    public Product setWeightA(Integer weight) {
         this.weight = weight;
         return this;
     }
@@ -82,7 +94,11 @@ public class Product {
         return length;
     }
 
-    public Product setLength(Integer length) {
+    public void setLength(Integer length) {
+        this.length = length;
+    }
+
+    public Product setLengthA(Integer length) {
         this.length = length;
         return this;
     }
@@ -91,7 +107,11 @@ public class Product {
         return width;
     }
 
-    public Product setWidth(Integer width) {
+    public void setWidth(Integer width) {
+        this.width = width;
+    }
+
+    public Product setWidthA(Integer width) {
         this.width = width;
         return this;
     }
@@ -100,7 +120,11 @@ public class Product {
         return height;
     }
 
-    public Product setHeight(Integer height) {
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
+
+    public Product setHeightA(Integer height) {
         this.height = height;
         return this;
     }
@@ -109,7 +133,11 @@ public class Product {
         return description;
     }
 
-    public Product setDescription(String description) {
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Product setDescriptionA(String description) {
         this.description = description;
         return this;
     }
@@ -118,7 +146,11 @@ public class Product {
         return detailedDescription;
     }
 
-    public Product setDetailedDescription(String detailedDescription) {
+    public void setDetailedDescription(String detailedDescription) {
+        this.detailedDescription = detailedDescription;
+    }
+
+    public Product setDetailedDescriptionA(String detailedDescription) {
         this.detailedDescription = detailedDescription;
         return this;
     }
