@@ -13,7 +13,7 @@ public class FilterUTF8 implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        if(request.getAttribute("type")!=null&&request.getAttribute("type").equals("testMB")){return;}
+        //if(request.getAttribute("type")!=null&&request.getAttribute("type").equals("testMB")){return;}
         if(request.getAttribute("type")!=null&&request.getAttribute("type").equals("productEditor")){return;}
         if(request.getAttribute("type")!=null&&request.getAttribute("type").equals("managerProducts")){return;}
         response.setCharacterEncoding("UTF-8");

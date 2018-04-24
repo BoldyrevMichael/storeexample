@@ -19,10 +19,10 @@ public class ProductsManagerCDI {
     }
 
     public void removeProduct(Product product) {
-        productDAO.removeProduct(product);
+        productDAO.removeProduct(product.getId());
     }
 
     public void addProduct() {
-        productDAO.addProduct(new Product(777,"Новый"));
+        productDAO.addProduct(new Product());
     }
 }

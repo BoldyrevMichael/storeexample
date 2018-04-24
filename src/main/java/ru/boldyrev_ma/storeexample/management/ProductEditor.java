@@ -12,7 +12,7 @@ import javax.inject.Inject;
 @ManagedBean
 public class ProductEditor extends AbstractController {
 
-    private final String id = getParamString("id");
+    private final Long id = Long.valueOf(getParamString("id"));
 
     @Inject
     private ProductDAO productDAO;

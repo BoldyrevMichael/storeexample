@@ -1,7 +1,9 @@
-package ru.boldyrev_ma.storeexample.entity;
+package ru.boldyrev_ma.storeexample.dto;
 
-public class Product {
-    private Integer id;
+import ru.boldyrev_ma.storeexample.entity.Product;
+
+public class ProductDTO {
+    private Long id;
     private String name;
     private Integer price;
     private Integer weight;
@@ -12,18 +14,30 @@ public class Product {
     private String smallImgName;
     private String description;
     private String detailedDescription;
-    private String imgCaption;
+    private String caption;
 
-    public Product(Integer id, String name) {
-        this.id = id;
-        this.name = name;
+    public ProductDTO(Product product) {
+        id = product.getId();
+        name = product.getName();
+        price = product.getPrice();
+        weight = product.getWeight();
+        length = product.getLength();
+        width = product.getWidth();
+        height = product.getHeight();
+        setImgName(name);
+        imgName = getImgName();
+        setSmallImgName(imgName);
+        smallImgName = getSmallImgName();
+        description = product.getDescription();
+        detailedDescription = product.getDetailedDescription();
+        caption = product.getCaption();
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -43,38 +57,28 @@ public class Product {
         this.price = price;
     }
 
-    public Product setPriceA(Integer price) {
-        this.price = price;
-        return this;
-    }
-
     public String getImgName() {
         return imgName;
     }
 
-    public Product setImgName() {
-        StringBuilder stringBuilder = new StringBuilder(name.trim().replace(" ", "-"));
-        this.imgName = stringBuilder.append(".jpg").toString();
-        return this;
+    public void setImgName(String imgName) {
+        this.imgName = imgName.trim().replace(" ", "-").concat(".jpg");
     }
 
     public String getSmallImgName() {
         return smallImgName;
     }
 
-    public Product setSmallImgName() {
-        StringBuilder stringBuilder = new StringBuilder(imgName);
-        this.smallImgName = stringBuilder.insert(0, "small-").toString();
-        return this;
+    public void setSmallImgName(String smallImgName) {
+        this.smallImgName = "small-" + smallImgName;
     }
 
-    public String getImgCaption() {
-        return imgCaption;
+    public String getCaption() {
+        return caption;
     }
 
-    public Product setImgCaption(String imgCaption) {
-        this.imgCaption = imgCaption;
-        return this;
+    public void setCaption(String caption) {
+        this.caption = caption;
     }
 
     public Integer getWeight() {
@@ -85,22 +89,12 @@ public class Product {
         this.weight = weight;
     }
 
-    public Product setWeightA(Integer weight) {
-        this.weight = weight;
-        return this;
-    }
-
     public Integer getLength() {
         return length;
     }
 
     public void setLength(Integer length) {
         this.length = length;
-    }
-
-    public Product setLengthA(Integer length) {
-        this.length = length;
-        return this;
     }
 
     public Integer getWidth() {
@@ -111,22 +105,12 @@ public class Product {
         this.width = width;
     }
 
-    public Product setWidthA(Integer width) {
-        this.width = width;
-        return this;
-    }
-
     public Integer getHeight() {
         return height;
     }
 
     public void setHeight(Integer height) {
         this.height = height;
-    }
-
-    public Product setHeightA(Integer height) {
-        this.height = height;
-        return this;
     }
 
     public String getDescription() {
@@ -137,21 +121,11 @@ public class Product {
         this.description = description;
     }
 
-    public Product setDescriptionA(String description) {
-        this.description = description;
-        return this;
-    }
-
     public String getDetailedDescription() {
         return detailedDescription;
     }
 
     public void setDetailedDescription(String detailedDescription) {
         this.detailedDescription = detailedDescription;
-    }
-
-    public Product setDetailedDescriptionA(String detailedDescription) {
-        this.detailedDescription = detailedDescription;
-        return this;
     }
 }

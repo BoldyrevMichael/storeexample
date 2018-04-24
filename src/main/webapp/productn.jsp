@@ -3,9 +3,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<c:set scope="page" value="<%= Long.valueOf((String) request.getAttribute(\"idProduct\")) %>" var="idProduct"/>
+<jsp:useBean id="productDAO" class="ru.boldyrev_ma.storeexample.dao.ProductDAO" scope="application"/>
+
 <head>
     <meta charset="UTF-8">
-    <title>Подарочная коробка</title>
+    <title>${productDAO.getProductById(idProduct).caption.replaceAll("<br>"," ")}</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -14,20 +17,18 @@
     <div class="content">
         <%@include file="/blocks/header.jsp" %>
         <main class="main">
-            <c:set scope="page" value="<%= (String) request.getAttribute(\"idProduct\") %>" var="idProduct"/>
-            <jsp:useBean id="productDAO" class="ru.boldyrev_ma.storeexample.dao.ProductDAO" scope="application"/>
-            <% if (productDAO.getIndexOfProduct((String) request.getAttribute("idProduct")) < 0) {
+            <% if (Long.valueOf((String) request.getAttribute("idProduct")) < 0) {
                 request.getRequestDispatcher("/errors/error404").forward(request, response);
             }%>
-            <h2>${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).imgCaption.replaceAll("<br>"," ")}</h2>
+            <h2>${productDAO.getProductById(idProduct).caption.replaceAll("<br>"," ")}</h2>
             <div class="about-product">
-                <a href="../products/product${idProduct}/${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).imgName}"
+                <a href="../products/product${idProduct}/${productDAO.getImgName(productDAO.getProductById(idProduct))}"
                    target="_blank"><img
-                        src="../products/product${idProduct}/${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).imgName}"
-                        alt="${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).imgCaption.replaceAll("<br>"," ")}, фото"></a>
+                        src="../products/product${idProduct}/${productDAO.getImgName(productDAO.getProductById(idProduct))}"
+                        alt="${productDAO.getProductById(idProduct).caption.replaceAll("<br>"," ")}, фото"></a>
                 <div class="description-and-buy">
                     <h3>Описание товара</h3>
-                    <p>${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).description}</p>
+                    <p>${productDAO.getProductById(idProduct).description}</p>
                     <h3>Характеристики товара</h3>
                     <!--<table>
                     <tr>
@@ -49,26 +50,26 @@
                     </tr>
                     </table>-->
                     <ul class="characteristics">
-                        <li>Вес: ${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).weight} г,</li>
+                        <li>Вес: ${productDAO.getProductById(idProduct).weight} г,</li>
                         <li>Размер:
                             <ul>
                                 <li>длина
-                                    &mdash; ${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).length}
+                                    &mdash; ${productDAO.getProductById(idProduct).length}
                                     см,
                                 </li>
                                 <li>ширина
-                                    &mdash; ${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).width}
+                                    &mdash; ${productDAO.getProductById(idProduct).width}
                                     см,
                                 </li>
                                 <li>высота
-                                    &mdash; ${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).height}
+                                    &mdash; ${productDAO.getProductById(idProduct).height}
                                     см.
                                 </li>
                             </ul>
                         </li>
                     </ul>
                     <h3>Подробное описание товара</h3>
-                    <p>${productDAO.products.get(productDAO.getIndexOfProduct(idProduct)).detailedDescription}</p>
+                    <p>${productDAO.getProductById(idProduct).detailedDescription}</p>
                     <button type="submit">Добавить в корзину</button>
                 </div>
             </div>

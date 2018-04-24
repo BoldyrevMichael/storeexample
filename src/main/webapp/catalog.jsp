@@ -20,8 +20,8 @@
                 <c:forEach items="${productDAO.products}" var="product">
                 <div class="product">
                     <a href="goods/${product.id}"><img
-                            src="products/product${product.id}/${product.smallImgName}"
-                            alt="${product.name}, фото"><br>${product.imgCaption}</a>
+                            src="products/product${product.id}/${productDAO.getSmallImgName(product)}"
+                            alt="${product.name}, фото"><br>${product.caption}</a>
                 </div>
                 </c:forEach>
         </main>
