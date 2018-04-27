@@ -2,6 +2,7 @@ package ru.boldyrev_ma.storeexample.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -14,9 +15,16 @@ public class Product extends AbstractEntity {
     private Integer height = -1;
     private String description = "";
     private String detailedDescription = "";
+    private Category category;
 
     @ManyToOne
-    private Category category;
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     @Column(columnDefinition = "DECIMAL(5,2)")
     public Integer getPrice() {

@@ -24,13 +24,11 @@ public class ProductDTO {
         length = product.getLength();
         width = product.getWidth();
         height = product.getHeight();
-        setImgName(name);
-        imgName = getImgName();
-        setSmallImgName(imgName);
-        smallImgName = getSmallImgName();
         description = product.getDescription();
         detailedDescription = product.getDetailedDescription();
         caption = product.getCaption();
+        imgName = getImgName(product);
+        smallImgName = getSmallImgName(product);
     }
 
     public Long getId() {
@@ -55,22 +53,6 @@ public class ProductDTO {
 
     public void setPrice(Integer price) {
         this.price = price;
-    }
-
-    public String getImgName() {
-        return imgName;
-    }
-
-    public void setImgName(String imgName) {
-        this.imgName = imgName.trim().replace(" ", "-").concat(".jpg");
-    }
-
-    public String getSmallImgName() {
-        return smallImgName;
-    }
-
-    public void setSmallImgName(String smallImgName) {
-        this.smallImgName = "small-" + smallImgName;
     }
 
     public String getCaption() {
@@ -127,5 +109,19 @@ public class ProductDTO {
 
     public void setDetailedDescription(String detailedDescription) {
         this.detailedDescription = detailedDescription;
+    }
+
+    public String getImgName(Product product) {
+        if (product != null) {
+            return product.getName().trim().replace(" ", "-").concat(".jpg");
+        }
+        return "imgName";
+    }
+
+    public String getSmallImgName(Product product) {
+        if (product != null) {
+            return "small-" + product.getName().trim().replace(" ", "-").concat(".jpg");
+        }
+        return "small-imgName";
     }
 }

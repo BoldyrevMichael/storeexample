@@ -7,7 +7,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <title>productEdit</title>
+    <title>Product Manager</title>
 </h:head>
 <h:body>
     <h:form>
@@ -18,74 +18,81 @@
             <p:outputLabel value="id"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.id}"/>
+            <p:inputText value="#{productManager.product.id}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="name"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.name}"/>
+            <p:inputText value="#{productManager.product.name}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="caption"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.caption}"/>
+            <p:inputText value="#{productManager.product.caption}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="price"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.price}"/>
+            <p:inputText value="#{productManager.product.price}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="weight"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.weight}"/>
+            <p:inputText value="#{productManager.product.weight}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="length"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.length}"/>
+            <p:inputText value="#{productManager.product.length}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="width"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.width}"/>
+            <p:inputText value="#{productManager.product.width}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="height"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputText value="#{productEditor.product.height}"/>
+            <p:inputText value="#{productManager.product.height}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="description"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputTextarea value="#{productEditor.product.description}"/>
+            <p:inputTextarea value="#{productManager.product.description}"/>
         </p:outputPanel>
 
         <p:outputPanel>
             <p:outputLabel value="detailedDescription"/>
         </p:outputPanel>
         <p:outputPanel style="margin-bottom: 20px;">
-            <p:inputTextarea value="#{productEditor.product.detailedDescription}"/>
+            <p:inputTextarea value="#{productManager.product.detailedDescription}"/>
         </p:outputPanel>
 
         <p:outputPanel>
-            <p:commandButton value="SAVE" action="#{productEditor.save}"/>
+            <p:outputLabel value="category"/>
+        </p:outputPanel>
+        <p:outputPanel style="margin-bottom: 20px;">
+            <p:inputTextarea value="#{productManager.product.category}"/>
+        </p:outputPanel>
+
+        <p:outputPanel>
+            <p:commandButton value="SAVE" action="#{productManager.save}"/>
         </p:outputPanel>
 
     </h:form>

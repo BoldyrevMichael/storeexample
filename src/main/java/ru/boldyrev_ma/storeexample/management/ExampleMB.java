@@ -6,7 +6,7 @@ import javax.faces.bean.ViewScoped;
 
 @ViewScoped
 @ManagedBean(name = "exampleMB", eager = true)
-public class ProductsManagerMB {
+public class ExampleMB {
     String field = "Field in Bean!";
 
     public String getField() {

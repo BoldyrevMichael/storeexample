@@ -8,68 +8,86 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
-    <title>ProductsManagementCDI</title>
+    <title>Products Manager</title>
 </h:head>
 <h:body>
     <h:form>
-        <p:dataTable value="#{productsManagerCDI.productList}" var="product" rowIndexVar="rowIndex"
+        <p:dataTable value="#{productsManager.productList}" var="product" rowIndexVar="rowIndex"
                      style="margin-bottom: 20px;" id="table">
+
             <p:column width="30" headerText="№" style="text-align: center;">
                 <p:outputLabel value="#{rowIndex+1}."/>
             </p:column>
+
             <p:column width="50" headerText="id" sortable="true" sortBy="#{product.id}">
                 <p:outputLabel value="#{product.id}"/>
             </p:column>
+
             <p:column headerText="name" style="width: auto; text-align: left;" sortable="true" sortBy="#{product.name}">
                 <p:outputLabel value="#{product.name}"/>
             </p:column>
+
             <p:column headerText="caption" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.name}">
                 <p:outputLabel value="#{product.caption}"/>
             </p:column>
+
             <p:column headerText="price" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.price}">
                 <p:outputLabel value="#{product.price}"/>
             </p:column>
+
             <p:column headerText="weight" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.weight}">
                 <p:outputLabel value="#{product.weight}"/>
             </p:column>
+
             <p:column headerText="length" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.length}">
                 <p:outputLabel value="#{product.length}"/>
             </p:column>
+
             <p:column headerText="width" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.width}">
                 <p:outputLabel value="#{product.width}"/>
             </p:column>
+
             <p:column headerText="height" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.height}">
                 <p:outputLabel value="#{product.height}"/>
             </p:column>
+
             <p:column headerText="description" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.description}">
                 <p:outputLabel value="#{product.description}"/>
             </p:column>
+
             <p:column headerText="detailed Description" style="width: auto; text-align: left;" sortable="true"
                       sortBy="#{product.detailedDescription}">
                 <p:outputLabel value="#{product.detailedDescription}"/>
             </p:column>
 
+            <p:column headerText="category" style="width: auto; text-align: left;" sortable="true"
+                      sortBy="#{product.category}">
+                <p:outputLabel value="#{product.category}"/>
+            </p:column>
+
             <p:column headerText="edit" style="width: auto; text-align: center;">
-                <p:link value="EDIT" outcome="productEdit">
+                <p:link value="EDIT" outcome="productManager">
                     <f:param name="id" value="#{product.id}"/>
                 </p:link>
             </p:column>
+
             <p:column headerText="remove" style="width: auto; text-align: center;">
                 <p:commandLink title="REMOVE" update="table" value="REMOVE"
-                               actionListener="#{productsManagerCDI.removeProduct(product)}"/>
+                               actionListener="#{productsManager.removeProduct(product)}"/>
             </p:column>
+
         </p:dataTable>
 
         <p:outputPanel style="margin-bottom: auto;">
             <p:commandButton value="ADD PRODUCT" update="table"
-                             actionListener="#{productsManagerCDI.addProduct}"/>
+                             actionListener="#{productsManager.addProduct}"/>
         </p:outputPanel>
     </h:form>
 </h:body>

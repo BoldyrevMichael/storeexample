@@ -7,17 +7,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "EditProductServlet", urlPatterns = {"/editproduct"})
-public class EditProductServlet extends HttpServlet {
+@WebServlet(name = "CategoryManagerServlet", urlPatterns = {"/categoryManager"})
+public class CategoryManagerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("type", "productEditor");
-        req.getRequestDispatcher("productEdit.xhtml").forward(req, resp);
+        req.setAttribute("type", "categoryManager");
+        req.getRequestDispatcher("categoryManager.xhtml").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("type", "productEditor");
-        req.getRequestDispatcher("productEdit.xhtml").forward(req, resp);
+        req.setAttribute("type", "categoryManager");
+        req.getRequestDispatcher("categoryManager.xhtml").forward(req, resp);
     }
 }
