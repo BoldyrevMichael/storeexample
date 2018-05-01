@@ -113,6 +113,24 @@
                     <port>9991</port>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <wsdlUrls>
+                                <wsdlUrl>http://localhost:8080/store-example/ProductService?wsdl</wsdlUrl>
+                            </wsdlUrls>
+                            <packageName>ru.boldyrev.ma.storeexample.serviceclient</packageName>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         <!-- </pluginManagement>-->
     </build>

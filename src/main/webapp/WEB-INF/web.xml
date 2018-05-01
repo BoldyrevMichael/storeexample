@@ -14,7 +14,7 @@
         Работоспособность способа проверена.
         <servlet>
             <servlet-name>MainPageServlet</servlet-name>
-            <servlet-class>ru.boldyrev_ma.storeexample.servlets.MainPageServlet</servlet-class>
+            <servlet-class>ru.boldyrev.ma.storeexample.servlet.MainPageServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>MainPageServlet</servlet-name>
@@ -23,7 +23,7 @@
 
         <servlet>
             <servlet-name>CatalogServlet</servlet-name>
-            <servlet-class>ru.boldyrev_ma.storeexample.servlets.CatalogServlet</servlet-class>
+            <servlet-class>ru.boldyrev.ma.storeexample.servlet.CatalogServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>CatalogServlet</servlet-name>
@@ -32,7 +32,7 @@
 
         <servlet>
             <servlet-name>ProductNServlet</servlet-name>
-            <servlet-class>ru.boldyrev_ma.storeexample.servlets.ProductNServlet</servlet-class>
+            <servlet-class>ru.boldyrev.ma.storeexample.servlet.ProductNServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>ProductNServlet</servlet-name>
@@ -41,7 +41,7 @@
 
         <servlet>
             <servlet-name>BasketServlet</servlet-name>
-            <servlet-class>ru.boldyrev_ma.storeexample.servlets.BasketServlet</servlet-class>
+            <servlet-class>ru.boldyrev.ma.storeexample.servlet.BasketServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>BasketServlet</servlet-name>
@@ -50,7 +50,7 @@
 
         <servlet>
             <servlet-name>OrderServlet</servlet-name>
-            <servlet-class>ru.boldyrev_ma.storeexample.servlets.OrderServlet</servlet-class>
+            <servlet-class>ru.boldyrev.ma.storeexample.servlet.OrderServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>OrderServlet</servlet-name>
@@ -59,7 +59,7 @@
 
         <servlet>
             <servlet-name>ContactsServlet</servlet-name>
-            <servlet-class>ru.boldyrev_ma.storeexample.servlets.ContactsServlet</servlet-class>
+            <servlet-class>ru.boldyrev.ma.storeexample.servlet.ContactsServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>ContactsServlet</servlet-name>
@@ -68,7 +68,7 @@
 
         <filter>
             <filter-name>FilterUTF8</filter-name>
-            <filter-class>ru.boldyrev_ma.storeexample.filters.FilterUTF8</filter-class>
+            <filter-class>ru.boldyrev.ma.storeexample.filter.FilterUTF8</filter-class>
         </filter>
         <filter-mapping>
             <filter-name>FilterUTF8</filter-name>

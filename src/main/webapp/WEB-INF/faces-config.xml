@@ -12,26 +12,26 @@
             <to-view-id>/exampleMB.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>productsManager</from-outcome>
-            <to-view-id>/productsManager.xhtml</to-view-id>
+            <from-outcome>list-of-product-controller</from-outcome>
+            <to-view-id>/listOfProductController.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>productManager</from-outcome>
-            <to-view-id>/productManager.xhtml</to-view-id>
+            <from-outcome>product-controller</from-outcome>
+            <to-view-id>/productController.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>categoriesManager</from-outcome>
-            <to-view-id>/categoriesManager.xhtml</to-view-id>
+            <from-outcome>list-of-category-controller</from-outcome>
+            <to-view-id>/listOfCategoryController.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>categoryManager</from-outcome>
-            <to-view-id>/categoryManager.xhtml</to-view-id>
+            <from-outcome>category-controller</from-outcome>
+            <to-view-id>/categoryController.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 <!-- в комментарии один из способов конфигурирования бинов
         <managed-bean>
         <managed-bean-name>exampleMB</managed-bean-name>
-        <managed-bean-class>ru.boldyrev_ma.storeexample.management.ExampleMB<managed-bean-class>
+        <managed-bean-class>ru.boldyrev.ma.storeexample.controller.ExampleMB<managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>-->
 </faces-config>

@@ -4,7 +4,7 @@
 <html lang="en">
 
 <c:set scope="page" value="<%= Long.valueOf((String) request.getAttribute(\"idProduct\")) %>" var="idProduct"/>
-<jsp:useBean id="productDAO" class="ru.boldyrev_ma.storeexample.dao.ProductDAO" scope="application"/>
+<jsp:useBean id="productDAO" class="ru.boldyrev.ma.storeexample.dao.ProductDAO" scope="application"/>
 
 <head>
     <meta charset="UTF-8">
@@ -30,25 +30,6 @@
                     <h3>Описание товара</h3>
                     <p>${productDAO.getProductById(idProduct).description}</p>
                     <h3>Характеристики товара</h3>
-                    <!--<table>
-                    <tr>
-                    <td>Вес:</td>
-                    <td colspan="2">400 г</td>
-                    </tr>
-                    <tr>
-                    <td rowspan="3">Размер:</td>
-                    <td>ширина</td>
-                    <td>20 см</td>
-                    </tr>
-                    <tr>
-                    <td>длина</td>
-                    <td>20 см</td>
-                    </tr>
-                    <tr>
-                    <td>высота</td>
-                    <td>10 см</td>
-                    </tr>
-                    </table>-->
                     <ul class="characteristics">
                         <li>Вес: ${productDAO.getProductById(idProduct).weight} г,</li>
                         <li>Размер:
